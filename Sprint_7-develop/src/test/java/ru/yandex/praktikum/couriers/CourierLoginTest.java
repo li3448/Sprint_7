@@ -17,13 +17,12 @@ import static org.hamcrest.Matchers.notNullValue;
 public class CourierLoginTest {
 
     private final CourierAPI courierApi = new CourierAPI();
-    private final CourierData courierData = new CourierData();
     private Courier courierRandom;
 
     @Before
     public void setUp() {
         RestAssured.baseURI = Service.BASE_URL;
-        courierRandom = courierData.generateRandom();
+        courierRandom = CourierData.generateRandom();
     }
 
     @After
